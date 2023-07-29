@@ -1,4 +1,6 @@
-.PHONY: build
+.PHONY: build init plan apply
+
+all: build init plan apply
 
 build:
 	GOOS=linux GOARCH=amd64 go build -mod=readonly -ldflags='-s -w' -o build/bin/compute_intensive .
